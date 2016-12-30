@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Sign up form</title>
+    </head>
+    <body>
+
+        <h1>Sign up to the event using this form</h1>
+
+        <p>The event costs only 100§ (billed from credit card)!</p>
+        
+        <form action="#" th:action="@{/form}" method="POST">
+            <input type="hidden" name="redirect" value="/done" />
+            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><label for="address">Address</label>: <input type="text" name="address" id="address"/></p>
+            <p><label for="address">Credit card number</label>: <input type="text" name="creditcard" id="creditcard"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+        <p><a href="/participants">Show participants</a></p>
+    </body>
+</html>

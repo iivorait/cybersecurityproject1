@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Participants</title>
+    </head>
+    <body>
+
+        <h1>List of participants</h1>
+
+        <span id="participants"></span>
+        
+        <h3>Search</h3>
+        <form action="#" th:action="@{/search}" method="POST">
+            <p><label for="name">Name</label>: <input type="text" name="name" id="name"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        
+        <script type="text/javascript" src="webjars/jquery/1.6.2/jquery.min.js"></script>
+        <script>
+            var request = $.ajax({
+                type: "POST",
+                url: "/rest",
+                success: function(data){
+                    $.each(data, function(i, d) {
+                        $('#participants').append('<p>' + d.name + '</p>');
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
