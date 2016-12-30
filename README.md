@@ -25,7 +25,7 @@ CSRF has been disabled "because the /participants POST request won't work otherw
 ### Flaw 4
 A3 - Cross-Site Scripting (XSS)
 
-The listing at /participants allows XSS scripting. OWASP ZAP found this flaw as Format String Error. The line $('#participants').append('<p>' + d.name + '</p>'); should be escaped for example like $( '#participants' ).append( $( '<p />' ).text( d.name ) );
+The listing at /participants allows XSS scripting. OWASP ZAP found this flaw as Format String Error. The line `$('#participants').append('<p>' + d.name + '</p>');` should be escaped for example like `$( '#participants' ).append( $( '<p />' ).text( d.name ) );`
 
 
 ### Flaw 5
