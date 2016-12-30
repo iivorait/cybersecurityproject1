@@ -4,6 +4,8 @@ Cyber Security Base - Course Project I
 Security flaw project
 ---------------------
 
+This is a simple event signup application. You can sign up to the event by filling the form on the front page. You may also view a list of participants (and search among them).
+
 ### Flaw 1
 A9 - Using Components with Known Vulnerabilities
 
